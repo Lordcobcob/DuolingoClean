@@ -1,6 +1,6 @@
 {
-  "name": "Name of your plugin",
-  "version": "1.0",
+  "name": "Duolingo Clean Themes",
+  "version": "1.2",
   "manifest_version": 3,
   "content_scripts": [
     {
