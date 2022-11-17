@@ -63,10 +63,6 @@ h2 {
  font-size: 24px !important;
 }
 
-._275sd {
-	display: none !important;
-}
-
 ._1LpFA {
 	color: #ffffff !important;
 }
@@ -109,4 +105,20 @@ element.style {
 }
 ._20BI9 {
 	--shine-background-color: linear-gradient(136deg,transparent 16.5%,rgba(255,231,0,0.5) 0,rgba(255,231,0,0.5) 46.5%,transparent 0,transparent 59.5%,rgba(255,231,0,0.5) 0,rgba(255,231,0,0.5) 77.5%,transparent 0),#ffc800 disable !important;
-  }
+}
+
+._1KUxv {
+	background: #020A0F !important;
+	border: #031926 !important;
+}
+
+
+
+._3p5e9 {
+	display: none;
+}
+
+
+.uqCpu .uOkpe {
+    border-top: 0px !important; 
+} 
