@@ -1,0 +1,13 @@
+{
+  "name": "Name of your plugin",
+  "version": "1.0",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["https://www.duolingo.com/*"],
+      "css": ["style.css"],
+      "js": ["javascript.js"]
+    }
+  ],
+  "permissions": ["activeTab"]
+}
