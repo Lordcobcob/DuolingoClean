@@ -165,6 +165,15 @@ element.style {
 ._2-OmZ {
 	color: #fff !important;
 }
+
+._1QDX9 {
+	color: #fff !important;
+    background-color: #031926 !important;
+    border-color: #000000 !important;
+    border-radius: 10px;
+    padding: 10px 12px;
+}
+
 /* Word Bank Garbage*/
 
 /* Credits To @Lazypelt#6960 On Discord For Helping With This Section*/
@@ -185,7 +194,6 @@ element.style {
   }
   
   ._3g2C1 {
-	  background-color: #797979 !important;
 	  border-bottom: 2px solid #051d3c !important;
 	  border-bottom-color: var(--web-ui_topbar-border-color,#051d3c) !important;
 	  color: #F1F7FB !important;
@@ -194,4 +202,18 @@ element.style {
   ._13HXc {
 	color: #ffffff !important;
   }
-  
+
+
+  /*Question Completed*/
+
+  /*Sucsess*/ 
+
+  ._3e9O1 {
+    background-color: #000000 !important;
+  }
+
+
+  /*Failure*/
+  ._3vF5k {
+    background-color: #000000 !important;
+  }
