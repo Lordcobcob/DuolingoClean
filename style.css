@@ -122,3 +122,63 @@ element.style {
 .uqCpu .uOkpe {
     border-top: 0px !important; 
 } 
+
+/*Lesson Loading Screen*/
+
+._3IvEG {
+    align-items: center;
+    background: #031926 !important;
+    display: flex;
+    justify-content: center;
+}
+
+.XWge1 {
+	color: #ffffff !important;
+}
+
+.a1TnJ {
+	color: #ffffff !important;
+	size: 20px !important;
+}
+
+/*Lesson Content*/
+ 
+._399cc {
+    background: #fff;
+    border-top: 2px solid #e5e5e5;
+    max-height: 140px;
+}
+
+._399cc {
+ background: #031926 !important;
+ border-top: 0px !important; 
+}
+
+/* Word Bank Garbage*/
+
+.WOZnx {
+	--__internal__border-color: var(--web-ui_button-border-color,#47a4bb) !important;
+	color: var(--web-ui_button-color,#051d3c) !important;
+  }
+  .WOZnx:before {
+	background-color: #0c1c24 !important;
+	border: 2px solid  #0c1c24 !important;
+	box-shadow: 0 2px 0 var(--__internal__border-color,#051d3c) !important;
+  }
+  
+  .WOZnx.LhRk3:not(._1rl91):before, .WOZnx:disabled:not(._1rl91):before {
+	background-color: #2d2f32 !important;
+	--__internal__border-color: var(--web-ui_button-border-color,#2d2f32) !important;
+  }
+  
+  ._3g2C1 {
+	  background-color: #797979 !important;
+	  border-bottom: 2px solid #051d3c !important;
+	  border-bottom-color: var(--web-ui_topbar-border-color,#051d3c) !important;
+	  color: #F1F7FB !important;
+  }
+
+  ._13HXc {
+	color: #ffffff !important;
+  }
+  
