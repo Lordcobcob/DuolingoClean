@@ -1,6 +1,6 @@
 body {
-   background-color: #031926 !important;
-  
+	background-color: #031926 !important;
+	color: #fff !important;
 }
 
 ::-webkit-scrollbar {
@@ -154,7 +154,20 @@ element.style {
  border-top: 0px !important; 
 }
 
+._3C_oC {
+    --__internal__border-color: #000000 !important;
+}
+
+._3C_oC:before {
+    background-color: #0c1c24 !important;
+}
+
+._2-OmZ {
+	color: #fff !important;
+}
 /* Word Bank Garbage*/
+
+/* Credits To @Lazypelt#6960 On Discord For Helping With This Section*/
 
 .WOZnx {
 	--__internal__border-color: var(--web-ui_button-border-color,#47a4bb) !important;
