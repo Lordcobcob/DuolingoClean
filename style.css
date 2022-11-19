@@ -204,6 +204,13 @@ element.style {
   }
 
 
+  /*Text Clean-Up*/
+
+  ._3pn9e {
+    color: #ffffff !important;
+  }
+
+
   /*Question Completed*/
 
   /*Sucsess*/ 
@@ -217,3 +224,32 @@ element.style {
   ._3vF5k {
     background-color: #000000 !important;
   }
+
+  /*Lesson Completed*/
+  ._3plTW {
+    background: linear-gradient(90deg,#fff,hsla(0,0%,100%,0) 10%,hsla(0,0%,100%,0) 90%,#fff) disable !important;
+  }
+
+
+
+
+
+
+  /*Stories*/
+
+  ._2nLk_ {
+    background-color: #031926 !important;
+  }
+
+  ._1eZU8 {
+    color: #fff !important;
+  }
+
+  ._1qdLM {
+    color: #ffffff !important;
+  }
+
+  ._1O290 {
+    --web-ui_button-color: #ffffff !important;
+  }
+
