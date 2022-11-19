@@ -253,3 +253,7 @@ element.style {
     --web-ui_button-color: #ffffff !important;
   }
 
+  .logout {
+    bottom: 0 !important;
+    padding-bottom: 20px !important;
+}
