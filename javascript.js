@@ -22,7 +22,7 @@ function expandMenu(){
             storiesSpan.classList.add("_23V08");
             storiesSpan.classList.add("_2BPAp");
             storiesSpan.classList.add("_1R__D");
-            location.reload()
+
           }
 
 
