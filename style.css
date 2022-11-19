@@ -253,7 +253,42 @@ element.style {
     --web-ui_button-color: #ffffff !important;
   }
 
+
+  /*Sidebar Stuff*/
   .logout {
     bottom: 0 !important;
     padding-bottom: 20px !important;
-}
+  }
+
+  .settings {
+   bottom: 0 !important;
+   padding-bottom: 80px !important;
+  }
+
+
+  .help {
+    bottom: 0 !important;
+    padding-bottom: 140px !important;
+  }
+
+
+  /*Settings*/
+
+  ._1wy04 {
+    color: #ffffff !important;
+  }
+
+  ._1CsoA {
+    color: #ffffff !important;
+  }
+  ._1eSrF {
+    background: #020a0f !important;
+  }
+
+  ._2k8ad {
+    color: #fff !important;
+  }
+
+  h4 {
+    color: #ffffff !important;
+  }

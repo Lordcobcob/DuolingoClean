@@ -32,14 +32,36 @@ function expandMenu(){
     var sidebar = document.querySelector("#root > div._1R67g._3YKTw");
 
     var logout = `
+    <div class="_1JSRd _3SuOC help">
+          <a class="_3zmPR" href="https://support.duolingo.com/hc/en-us" rel="noopener noreferrer noopener" target="_blank" tabindex="0">
+            <span class="_3BxbA _2q30B _23V08 _1R__D _1eTnJ">
+              <div class="AMXUp"><img class="ZFBAG" src="https://static.wikia.nocookie.net/duolingo/images/f/f7/Story-The_Hacker.svg/"></div>
+              <span class="_1lJDk">Support</span>
+            </span>
+          </a>
+    </div>
+    
+    <div class="_1JSRd _3SuOC settings">
+          <a class="_3zmPR" href="https://www.duolingo.com/settings/account" rel="noopener noreferrer noopener" target="_blank" tabindex="0">
+            <span class="_3BxbA _2q30B _23V08 _1R__D _1eTnJ">
+              <div class="AMXUp"><img class="ZFBAG" src="https://blog.duolingo.com/content/images/2022/04/super-duo-thumb.png"></div>
+              <span class="_1lJDk">Settings</span>
+            </span>
+          </a>
+    </div>
+
+
     <div class="_1JSRd _3SuOC logout">
           <a class="_3zmPR" href="https://www.duolingo.com/logout" rel="noopener noreferrer noopener" target="_blank" tabindex="0">
             <span class="_3BxbA _2q30B _23V08 _1R__D _1eTnJ">
-              <div class="AMXUp"><img class="ZFBAG" src="https://d35aaqx5ub95lt.cloudfront.net/vendor/784035717e2ff1d448c0f6cc4efc89fb.svg"></div>
+              <div class="AMXUp"><img class="ZFBAG" src="https://i.imgur.com/LAr4CQ9.png"></div>
               <span class="_1lJDk">Logout</span>
             </span>
           </a>
     </div>`;
+
+    
+
 
     sidebar.insertAdjacentHTML("beforeend", logout);
 
