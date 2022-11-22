@@ -5,3 +5,5 @@ Duolingo  clean is an extension that works on the website https://www.duolingo.c
 re-adding things that were removed from the side bar like the stories tab along with adding new buttons for support, settings, log out and more. The extension also comes
 with built in dark mode allowing you to learn easily on a late night. The theme has an accent color of a bright neon blue. The extension is currently being worked on by 2
 people, Me and Lazypelt. To get in contact with me you can use my discord username @Lordcobcob#8554 or to contact Lazypelt contact them on discord by @Lazypelt#6960.
+
+https://media.discordapp.net/attachments/1043245856045940767/1043595570348036157/image.png
