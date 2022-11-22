@@ -296,3 +296,20 @@ element.style {
   ._1kT7V {
     display: none !important;
   }
+  
+  .hidden {
+    display: none !important;
+  }
+
+  .card {
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+  }
+  
+  .TipsTitle { 
+    color: #000000 !important;
+    size: 20px !important;
+  }

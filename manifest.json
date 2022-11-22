@@ -7,6 +7,12 @@
       "matches": ["https://www.duolingo.com/*"],
       "css": ["style.css"],
       "js": ["javascript.js"]
+    },
+	{
+      "matches": ["https://preview.duolingo.com/*"],
+      "css": ["style.css"],
+      "js": ["javascript.js"]
     }
-  ]
+  ],
+  "permissions": ["activeTab"]
 }
