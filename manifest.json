@@ -13,6 +13,5 @@
       "css": ["style.css"],
       "js": ["javascript.js"]
     }
-  ],
-  "permissions": ["activeTab"]
+  ]
 }
