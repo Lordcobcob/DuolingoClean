@@ -1,3 +1,5 @@
+
+
 function expandMenu(){
 
 
@@ -61,7 +63,7 @@ function expandMenu(){
     <div class="_1JSRd _3SuOC settings">
           <a class="_3zmPR" href="https://www.duolingo.com/settings/account" rel="noopener noreferrer noopener" target="_blank" tabindex="0">
             <span class="_3BxbA _2q30B _23V08 _1R__D _1eTnJ">
-              <div class="AMXUp"><img class="ZFBAG" src="https://blog.duolingo.com/content/images/2022/04/super-duo-thumb.png"></div>
+              <div class="AMXUp"><img class="ZFBAG" src="https://d35aaqx5ub95lt.cloudfront.net/images/super/88cab8339223a143898e0704f480b875.svg"></div>
               <span class="_1lJDk">Settings</span>
             </span>
           </a>
@@ -88,23 +90,71 @@ setInterval(function() {
   expandMenu();
 }, 1000);
 
-function espanolTipsLoad() {
-  var espanolTips = `
-  <div class="card">
-    <div class="container">
-      <h4 class=TipsTitle><b>Happy Endings</b></h4>
-      <p>The basic form of a verb is called an infinitive. For example, hablar (to speak), comer (to eat), and escribir (to write) are all infinitives.
+function getTips(){
 
-        Spanish has three verb groups: verbs ending in ‑ar, ‑er, or ‑ir. These are the ending patterns for each group.</p>
-    </div>
-  </div>
-  `
+  var req = new XMLHttpRequest();
+  req.open('GET', document.location, false);
+  req.send(null);
+  var headers = req.getAllResponseHeaders().toLowerCase();
 
-  var ContentToReplaceSpanish = document.querySelector("#root > div._1R67g._3YKTw > div._2_9xr > div:nth-child(2) > div._2rYrl > div._33Mo9 > div > div:nth-child(3)");
-  ContentToReplaceSpanish.innerHTML = espanolTips;
+  // Convert the header string into an array
+  // of individual headers
+  const arr = headers.trim().split(/[\r\n]+/);
+
+  // Create a map of header names to values
+  const headerMap = {};
+  arr.forEach((line) => {
+  const parts = line.split(': ');
+  const header = parts.shift();
+  const value = parts.join(': ');
+  headerMap[header] = value;
+  });
+
+  const userID = headerMap["x-uid"];
+
+  var reqTips = new XMLHttpRequest();
+  reqTips.open("GET", "https://www.duolingo.com/2017-06-30/users/" + userID + "?fields=currentCourse");
+  reqTips.send();
+  var tips = '<div class="_3cZIJ _2di58"><a class="_2xq2g _1QkXc" href="/learn"><div data-test="back-arrow" class="-qc09"><div class="_2sPx0 _2jNpf _1G1lu _3LXZ7"></div><div class="_2rUPd">Home</div></div></a></div><div>';
+  reqTips.onload = () => {
+     console.log(reqTips);
+     if (reqTips.status == 200){
+        console.log(JSON.parse(reqTips.response))
+        var skills = JSON.parse(reqTips.response).currentCourse.skills;
+        skills.forEach(skill => {
+           tips += "</div>";
+           console.log(skill[0].tipsAndNotes);
+           tips += skill[0].tipsAndNotes;
+        });
+        tips += "</div>";
+     
+        var text = document.querySelector("#root > div._1R67g._3YKTw > div > div:nth-child(2) > div._2rYrl > div._33Mo9 > div");
+        text.innerHTML = tips;
+     
+     } else {
+        console.log("error");
+     }
+  }
 }
 
 
-if (window.location.href.indexOf('/guidebook/es/1') !== -1) {
-  espanolTipsLoad();
+var images = document.querySelectorAll("img._2SLh1");
+images.forEach(i => {
+  i.src = "https://svgur.com/i/oQW.svg";
+})
+
+
+var images = document.querySelectorAll("img._2G02F");
+images.forEach(i => {
+  i.src = "https://svgur.com/i/oRX.svg";
+})
+
+if (window.location.href.indexOf('/guidebook/') !== -1) {
+  getTips();
 }
+
+
+  
+
+
+

@@ -5,13 +5,19 @@
   "content_scripts": [
     {
       "matches": ["https://www.duolingo.com/*"],
+      "resources": [ "CustomLingotDesign.svg" ],
       "css": ["style.css"],
       "js": ["javascript.js"]
     },
 	{
       "matches": ["https://preview.duolingo.com/*"],
+      "resources": [ "CustomLingotDesign.svg" ],
       "css": ["style.css"],
       "js": ["javascript.js"]
     }
-  ]
+  ],
+
+  "action": {
+    "default_popup": "menu.html"
+  }
 }

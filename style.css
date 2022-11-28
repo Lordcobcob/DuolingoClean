@@ -269,7 +269,10 @@ element.style {
   .help {
     bottom: 0 !important;
     padding-bottom: 140px !important;
+    animation: ease-in;
+  
   }
+
 
 
   /*Settings*/
@@ -312,4 +315,53 @@ element.style {
   .TipsTitle { 
     color: #000000 !important;
     size: 20px !important;
+  }
+
+  .bPukF {
+    width: max-content !important;
+    height: max-content !important;
+  }
+
+  /* Tree Testing */
+
+  /*
+  To be enabled when the the legendarys turn gold.
+  May also require the images.
+
+  --Legandarys--
+
+  ._3bpfS {
+    --path-level-color: linear-gradient(270deg,#776de1,#5c6cfc 98.13%) !important;
+  }
+
+  ._3bpfS:after {
+    box-shadow: 0 8px 0rgba(0,0,0,.2),0 8px 0 #5c6cfc !important;
+  }
+
+  --Gold--
+  ._2D40f {
+    --path-level-color: #ffc800 !important;
+  }
+
+  ._2D40f:after {
+    box-shadow: 0 8px 0 rgb(0 0 0 / 50%),0 8px 0 var(--path-level-color) !important;
+  }
+  */
+
+  ._3bpfS {
+    --path-level-color: linear-gradient(270deg,#106900,#0dff00 98.13%) !important;
+  }
+
+  ._2D40f {
+    --path-level-color: #ffc801;
+  }
+
+  
+  /* Lets Make The Website Cleaner */
+  .ENXVm {
+    color: #3737c8 !important;
+  }
+
+  ._3Gi0S {
+    color: #3737c8 !important;
   }
