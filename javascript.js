@@ -50,6 +50,35 @@ function expandMenu(){
       });
     }
 
+    console.log("Tips Tab Testing");
+    menu.innerHTML += '<div class="_3LfJs _2ulLR"><a class="_3zmPR" href="/guidebook/es/1" rel="noopener noreferrer noopener" target="/guidebook/es/1" tabindex="0"><span class="_3BxbA _2q30B _23V08 _1R__D _1eTnJ"><div class="AMXUp"><img class="ZFBAG" src="https://static.wikia.nocookie.net/duolingo/images/4/40/Story-Drawing_in_the_Park.svg/"></div><span class="_1lJDk">Tips</span></span></a></div>';
+    if (window.location.href.indexOf('/guidebook') !== -1) {
+    
+        var anchors = document.querySelectorAll("a");
+        anchors.forEach(a => {
+          if (window.location.href.indexOf('/guidebook/') !== -1) {
+            var stories = document.querySelector("#root > div._1R67g._3YKTw > div._2_9xr > div._1JSRd._3SuOC > div._3bTT7 > div:nth-child(8)")
+            stories.classList.add("_2-Cde");
+          }
+          if (window.location.href.indexOf('/guidebook/') !== -1) {
+            var storiesSpan = document.querySelector("#root > div._1R67g._3YKTw > div._2_9xr > div._1JSRd._3SuOC > div._3bTT7 > div._3LfJs._2ulLR._2-Cde > a > span")
+            storiesSpan.classList.remove("_3BxbA");
+            storiesSpan.classList.remove("_2q30B");
+            storiesSpan.classList.remove("_23V08");
+            storiesSpan.classList.remove("_1R__D");
+            storiesSpan.classList.remove("_1eTnJ");
+            storiesSpan.classList.add("_3BxbA");
+            storiesSpan.classList.add("_2q30B");
+            storiesSpan.classList.add("_23V08");
+            storiesSpan.classList.add("_2BPAp");
+            storiesSpan.classList.add("_1R__D");
+  
+          }
+  
+  
+        });
+      }
+
     var logout = `
     <div class="_1JSRd _3SuOC help">
           <a class="_3zmPR" href="https://support.duolingo.com/hc/en-us" rel="noopener noreferrer noopener" target="_blank" tabindex="0">
@@ -115,6 +144,7 @@ function getTips(){
   var reqTips = new XMLHttpRequest();
   reqTips.open("GET", "https://www.duolingo.com/2017-06-30/users/" + userID + "?fields=currentCourse");
   reqTips.send();
+  console.log(userID)
   var tips = '<div class="_3cZIJ _2di58"><a class="_2xq2g _1QkXc" href="/learn"><div data-test="back-arrow" class="-qc09"><div class="_2sPx0 _2jNpf _1G1lu _3LXZ7"></div><div class="_2rUPd">Home</div></div></a></div><div>';
   reqTips.onload = () => {
      console.log(reqTips);
@@ -122,10 +152,11 @@ function getTips(){
         console.log(JSON.parse(reqTips.response))
         var skills = JSON.parse(reqTips.response).currentCourse.skills;
         skills.forEach(skill => {
-           tips += "</div>";
-           console.log(skill[0].tipsAndNotes);
-           tips += skill[0].tipsAndNotes;
-        });
+          if((skill[0].tipsAndNotes) != null) {
+             tips += "</div>";
+             tips += skill[0].tipsAndNotes;
+          };
+       });
         tips += "</div>";
      
         var text = document.querySelector("#root > div._1R67g._3YKTw > div > div:nth-child(2) > div._2rYrl > div._33Mo9 > div");

@@ -324,11 +324,6 @@ element.style {
 
   /* Tree Testing */
 
-  /*
-  To be enabled when the the legendarys turn gold.
-  May also require the images.
-
-  --Legandarys--
 
   ._3bpfS {
     --path-level-color: linear-gradient(270deg,#776de1,#5c6cfc 98.13%) !important;
@@ -346,15 +341,7 @@ element.style {
   ._2D40f:after {
     box-shadow: 0 8px 0 rgb(0 0 0 / 50%),0 8px 0 var(--path-level-color) !important;
   }
-  */
 
-  ._3bpfS {
-    --path-level-color: linear-gradient(270deg,#106900,#0dff00 98.13%) !important;
-  }
-
-  ._2D40f {
-    --path-level-color: #ffc801;
-  }
 
   
   /* Lets Make The Website Cleaner */
@@ -364,4 +351,42 @@ element.style {
 
   ._3Gi0S {
     color: #3737c8 !important;
+  }
+
+  /* Yes, Thats Right, Tips */
+
+  h5 {
+    font-size: 30px !important;
+    text-align: center !important;
+    padding-bottom: 20px !important;
+    padding-top: 20px !important;
+  }
+
+  .iew1c {
+    display: none !important;
+  } 
+
+  h3 {
+   font-size: 30px !important;
+   text-align: center !important;
+   padding-bottom: 20px !important;
+   padding-top: 20px !important;
+ }
+
+
+
+
+
+
+
+  /* Leaderboard Page Stuff, Bad Update In My Opinion */
+  ._2p1op {
+    background: #031926 !important;
+  }
+
+  hr {
+    border-top: 2px solid #031926 !important; 
+  }
+  ._1lJDk {
+    color: #5c6164 !important;
   }
