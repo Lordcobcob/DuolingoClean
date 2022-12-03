@@ -15,9 +15,5 @@
       "css": ["style.css"],
       "js": ["javascript.js"]
     }
-  ],
-
-  "action": {
-    "default_popup": "menu.html"
-  }
+  ]
 }

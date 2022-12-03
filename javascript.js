@@ -1,5 +1,4 @@
 
-
 function expandMenu(){
 
 
@@ -22,7 +21,7 @@ function expandMenu(){
 
 
   console.log("Storys Tab Re-Added!");
-  menu.innerHTML += '<div class="_3LfJs _2ulLR"><a class="_3zmPR" href="./stories" rel="noopener noreferrer noopener" target="/stories" tabindex="0"><span class="_3BxbA _2q30B _23V08 _1R__D _1eTnJ"><div class="AMXUp"><img class="ZFBAG" src="https://static.wikia.nocookie.net/duolingo/images/9/9a/Stories-new.svg"></div><span class="_1lJDk">Stories</span></span></a></div>';
+  menu.innerHTML += '<div class="_3LfJs _2ulLR"><a class="_3zmPR" href="https://www.duolingo.com/stories" rel="noopener noreferrer noopener" target="/stories" tabindex="0"><span class="_3BxbA _2q30B _23V08 _1R__D _1eTnJ"><div class="AMXUp"><img class="ZFBAG" src="https://static.wikia.nocookie.net/duolingo/images/9/9a/Stories-new.svg"></div><span class="_1lJDk">Stories</span></span></a></div>';
   if (window.location.href.indexOf('/stories') !== -1) {
   
       var anchors = document.querySelectorAll("a");
@@ -51,33 +50,66 @@ function expandMenu(){
     }
 
     console.log("Tips Tab Testing");
+    console.log(window.location.href.indexOf('/guidebook'));
     menu.innerHTML += '<div class="_3LfJs _2ulLR"><a class="_3zmPR" href="/guidebook/es/1" rel="noopener noreferrer noopener" target="/guidebook/es/1" tabindex="0"><span class="_3BxbA _2q30B _23V08 _1R__D _1eTnJ"><div class="AMXUp"><img class="ZFBAG" src="https://static.wikia.nocookie.net/duolingo/images/4/40/Story-Drawing_in_the_Park.svg/"></div><span class="_1lJDk">Tips</span></span></a></div>';
-    if (window.location.href.indexOf('/guidebook') !== -1) {
-    
-        var anchors = document.querySelectorAll("a");
-        anchors.forEach(a => {
-          if (window.location.href.indexOf('/guidebook/') !== -1) {
-            var stories = document.querySelector("#root > div._1R67g._3YKTw > div._2_9xr > div._1JSRd._3SuOC > div._3bTT7 > div:nth-child(8)")
-            stories.classList.add("_2-Cde");
-          }
-          if (window.location.href.indexOf('/guidebook/') !== -1) {
-            var storiesSpan = document.querySelector("#root > div._1R67g._3YKTw > div._2_9xr > div._1JSRd._3SuOC > div._3bTT7 > div._3LfJs._2ulLR._2-Cde > a > span")
-            storiesSpan.classList.remove("_3BxbA");
-            storiesSpan.classList.remove("_2q30B");
-            storiesSpan.classList.remove("_23V08");
-            storiesSpan.classList.remove("_1R__D");
-            storiesSpan.classList.remove("_1eTnJ");
-            storiesSpan.classList.add("_3BxbA");
-            storiesSpan.classList.add("_2q30B");
-            storiesSpan.classList.add("_23V08");
-            storiesSpan.classList.add("_2BPAp");
-            storiesSpan.classList.add("_1R__D");
-  
-          }
-  
-  
-        });
+    console.log(window.location.href.indexOf('/guidebook'));
+
+    if (window.location.href.indexOf('/guidebook') != -1) {
+      console.log(window.location.href.indexOf('/guidebook'));
+
+      var tips;
+      var tipsSpan;
+      var learnSpan;
+/*
+      document.querySelectorAll("span").forEach(span => {
+        if (span.innerText == "Tips"){
+          tips = span;
+        }
+      });
+
+      if (tips !== null){
+        tips.classList.add("_2-Cde");
+
       }
+*/
+      var spans = document.querySelectorAll("span");
+      for (var i = 0, element; element = spans[i]; i++) {
+        if (element.innerHTML.indexOf("Tips") !== -1){
+          tipsSpan = element;
+          break;
+        }
+      }
+
+      for (var i = 0, element; element = spans[i]; i++) {
+        if (element.innerHTML.indexOf("Learn") !== -1){
+          learnSpan = element;
+          break;
+        }
+      }
+
+      console.log(learnSpan);
+      console.log(tipsSpan);
+
+
+      tipsSpan.classList.remove("_2q30B");
+      tipsSpan.classList.remove("_23V08");
+      tipsSpan.classList.remove("_1R__D");
+      tipsSpan.classList.remove("_1eTnJ");
+      tipsSpan.classList.add("_3BxbA");
+      tipsSpan.classList.add("_2q30B");
+      tipsSpan.classList.add("_23V08");
+      tipsSpan.classList.add("_2BPAp");
+      tipsSpan.classList.add("_1R__D");
+
+
+      learnSpan.setAttributeNS(null, 'class', '_3BxbA _2q30B _23V08 _1R__D _1eTnJ');
+      learnSpan.classList.add("_3BxbA");
+      learnSpan.classList.add("_2q30B");
+      learnSpan.classList.add("_23V08");
+      learnSpan.classList.add("_1R__D");
+      learnSpan.classList.add("_1eTnJ");
+
+  }
 
     var logout = `
     <div class="_1JSRd _3SuOC help">
@@ -186,6 +218,3 @@ if (window.location.href.indexOf('/guidebook/') !== -1) {
 
 
   
-
-
-
